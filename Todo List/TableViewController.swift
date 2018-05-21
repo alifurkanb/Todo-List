@@ -11,9 +11,13 @@ import UIKit
 class TableViewController: UITableViewController {
 
     var listArray = ["egg", "milk", "banana", "ketchup"]
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if defaults.array(forKey: "ListArray") != nil{
+            listArray = defaults.array(forKey: "ListArray") as! [String]
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,24 +41,25 @@ class TableViewController: UITableViewController {
     }
 
     @IBAction func addItem(_ sender: Any) {
-        let textField = UITextField()
         
-        let alert = UIAlertController(title: "Add New Item", message: "", preferredStyle: .alert)
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add New Item To List", message: "", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
             self.listArray.append(textField.text!)
             self.tableView.reloadData()
-        }
-        
-        alert.addTextField { (textField) in
-            textField.placeholder = "Create new item"
+            self.defaults.set(self.listArray, forKey: "ListArray")
         }
         
         alert.addAction(action)
         
-        present(alert, animated: true, completion: nil)
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create new item"
+            textField = alertTextField
+        }
         
+        present(alert, animated: true, completion: nil)
     }
-    
 }
 
