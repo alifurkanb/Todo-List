@@ -13,8 +13,9 @@
 		CA915DA020B1C9F5008FFC88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA915D9E20B1C9F5008FFC88 /* Main.storyboard */; };
 		CA915DA220B1C9F5008FFC88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA915DA120B1C9F5008FFC88 /* Assets.xcassets */; };
 		CA915DA520B1C9F5008FFC88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA915DA320B1C9F5008FFC88 /* LaunchScreen.storyboard */; };
-		CA92B95820BB69F100C21C2B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA92B95620BB69F100C21C2B /* DataModel.xcdatamodeld */; };
 		CA9D9BB820BC2ED300BA00A0 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9D9BB720BC2ED300BA00A0 /* CategoryTableViewController.swift */; };
+		CACC685520BC50A1002AD0CB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC685420BC50A1002AD0CB /* Item.swift */; };
+		CACC685720BC50F1002AD0CB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC685620BC50F1002AD0CB /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +28,9 @@
 		CA915DA120B1C9F5008FFC88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA915DA420B1C9F5008FFC88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA915DA620B1C9F5008FFC88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA92B95720BB69F100C21C2B /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		CA9D9BB720BC2ED300BA00A0 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		CACC685420BC50A1002AD0CB /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		CACC685620BC50F1002AD0CB /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F6DCB4E0A2AF8870FE3500B0 /* Pods_Todo_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todo_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -104,7 +106,8 @@
 		CA9E12D320B3337C00C674F5 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				CA92B95620BB69F100C21C2B /* DataModel.xcdatamodeld */,
+				CACC685620BC50F1002AD0CB /* Category.swift */,
+				CACC685420BC50A1002AD0CB /* Item.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -241,7 +244,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA92B95820BB69F100C21C2B /* DataModel.xcdatamodeld in Sources */,
+				CACC685520BC50A1002AD0CB /* Item.swift in Sources */,
+				CACC685720BC50F1002AD0CB /* Category.swift in Sources */,
 				CA915D9D20B1C9F5008FFC88 /* TableViewController.swift in Sources */,
 				CA915D9B20B1C9F5008FFC88 /* AppDelegate.swift in Sources */,
 				CA9D9BB820BC2ED300BA00A0 /* CategoryTableViewController.swift in Sources */,
@@ -429,20 +433,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		CA92B95620BB69F100C21C2B /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				CA92B95720BB69F100C21C2B /* DataModel.xcdatamodel */,
-			);
-			currentVersion = CA92B95720BB69F100C21C2B /* DataModel.xcdatamodel */;
-			name = DataModel.xcdatamodeld;
-			path = "../Supporting Files/DataModel.xcdatamodeld";
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = CA915D8F20B1C9F5008FFC88 /* Project object */;
 }
